@@ -1,12 +1,15 @@
 #!/usr/bin/python
 
-def main():
-	accountList=open("accountList.csv", "r")
-	
-	for account in accountList:
-		print accountList.readline()
+import csv
 
+
+def main():
+    accounts = {}
+    with open('accountList.csv') as accountList:
+        reader = csv.DictReader(accountList)
+        for row in reader:
+            print row
+
+    accountList.close()
 
 main()
-
-
