@@ -1,4 +1,4 @@
-accountName,emailAddress,ownerFirstName,ownerLastName,superuser
+account_name,account_email,ownerFirstName,ownerLastName,superuser
 SampleAccount0,jpdixon+awsaccountautomation0@gmail.com,John,Dixon1,dixonaws0
 SampleAccount1,jpdixon+awsaccountautomation1@gmail.com,John,Dixon2,dixonaws1
 SampleAccount2,jpdixon+awsaccountautomation2@gmail.com,John,Dixon3,dixonaws2
