@@ -2,6 +2,16 @@
 
 import csv
 
+def create_account(
+        account_name,
+        account_email,
+        account_role,
+        access_to_billing,
+        organization_unit_id,
+        scp):
+        print "create_account(): I got account " + account_email
+
+
 def main():
     lstAccounts = []
 
@@ -9,19 +19,16 @@ def main():
     with open('accountList.csv') as filAccountList:
         reader = csv.DictReader(filAccountList)
         for row in reader:
-            lstAccounts.append(row)
+         lstAccounts.append(row)
 
     filAccountList.close()
-
-    # print all the accounts
-    for account in lstAccounts:
-        print account
 
     intNumberOfAccounts = len(lstAccounts)
     print "Read " + str(intNumberOfAccounts) + " accounts from the input file"
 
-    # pop an account from the accounts list and print the email address of it
-    randomAccount = lstAccounts.pop();
-    print "Email address from account 0: " + randomAccount['emailAddress']
+
+    # print all the accounts
+    for account in lstAccounts:
+        create_account("testaccount", account['emailAddress'],"","","","")
 
 main()
